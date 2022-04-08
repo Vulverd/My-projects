@@ -1,0 +1,147 @@
+/* reset css */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-size: 62.5%;
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
+  background: #17161b;
+  color: #ffffff;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+ul {
+  padding-left: 0;
+}
+
+ul>li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+}
+
+button,
+input {
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.header {
+  grid-area: my-header;
+}
+
+.aside {
+  grid-area: my-aside;
+}
+
+.main {
+  grid-area: my-main;
+}
+
+.grid {
+  display: grid;
+  grid-template-areas: 
+  "my-header my-header"
+  "my-aside my-main"
+  "my-aside my-main";
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  gap: 8rem 0;
+}
+
+.grid-init {
+  max-width: 144rem;
+  margin: auto;
+  padding: 3rem 2.4rem 4rem;
+}
+
+.header-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.header-nav {
+  margin-right: 9.2rem;
+}
+
+.header-logo {
+  margin-right: 7rem;
+  font-size: 6.4rem;
+}
+
+.header-nav a {
+  font-size: 2.4rem;
+}
+
+.header-nav a:not(:last-child) {
+  margin-right: 2rem;
+}
+
+.header-find {
+  margin-right: 3.9rem;
+  width: 33rem;
+  height: 4.1rem;
+  border-radius: .8rem;
+}
+
+.header-find input {
+  padding-left: 1rem;
+  padding-right: 4rem;
+  width: 100%;
+  height: 100%;
+  border-radius: .8rem;
+  background: rgba(255, 255, 255, 0.08) url("../img/search.svg");
+  background-repeat: no-repeat;
+  background-size: 2rem;
+  background-position: top 50% right 1.5rem;
+  font-size: 2rem;
+  color: #ffffff;
+}
+
+.header-find input::placeholder {
+  font-size: 2rem;
+  color: #ffffff;
+}
+
+.header-date {
+  margin-right: 8.7rem;
+}
+
+.date-hour {
+  font-size: 2rem;
+}
+
+.date-days {
+  font-size: 1.2rem;
+}
+
+.personal img {
+width: 6rem;
+height: 6rem;
+border-radius: 50%;
+}
